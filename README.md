@@ -6,6 +6,8 @@ DURADE Romain
 DUVIVIERS Alexandre
 METAYER Sylvain
 
+Serveur de rendu : https://typo3.dawin.pitchart.me
+
 ## Notation / Instructions
 Notation sur le serveur https:/typo3.dawin.pitchart.me
 
