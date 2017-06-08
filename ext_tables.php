@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 	'TARS.' . $_EXTKEY,
 	'Pi1',
-	'list_and_show_contact'
+	'annuaire_tars_list_and_show_contact'
 );
 
 $pluginSignature = str_replace('_','',$_EXTKEY) . '_pi1';
@@ -16,7 +16,7 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignat
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 	'TARS.' . $_EXTKEY,
 	'Pi2',
-	'list_and_show_organisme'
+	'annuaire_tars_list_and_show_organisme'
 );
 
 $pluginSignature = str_replace('_','',$_EXTKEY) . '_pi2';
@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignat
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 	'TARS.' . $_EXTKEY,
 	'Pi3',
-	'list_show_and_search_contact'
+	'annuaire_tars_list_show_and_search_contact'
 );
 
 $pluginSignature = str_replace('_','',$_EXTKEY) . '_pi3';

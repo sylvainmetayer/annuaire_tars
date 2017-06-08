@@ -521,7 +521,7 @@
                     "switchableActions": "list_and_show_contact\nContact -> list; Contact -> show;"
                 },
                 "key": "pi1",
-                "name": "list_and_show_contact"
+                "name": "annuaire_tars_list_and_show_contact"
             },
             {
                 "actions": {
@@ -530,7 +530,7 @@
                     "switchableActions": "list_and_show_organisme\nOrganisme -> list;Organisme -> show; Organisme -> contactList; Organisme -> serviceList; Organisme -> serviceShow;"
                 },
                 "key": "pi2",
-                "name": "list_and_show_organisme"
+                "name": "annuaire_tars_list_and_show_organisme"
             },
             {
                 "actions": {
@@ -539,7 +539,7 @@
                     "switchableActions": "list_show_and_search_contact\nContact -> list; Contact -> search; Contact -> show;"
                 },
                 "key": "pi3",
-                "name": "list_show_and_search_contact"
+                "name": "annuaire_tars_list_show_and_search_contact"
             }
         ],
         "vendorName": "TARS"
@@ -583,7 +583,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-06-08 02:40",
+        "last_modified": "2017-06-08 05:02",
         "extension_builder_version": "7.6.0",
         "be_user": " (1)"
     }
