@@ -527,7 +527,7 @@
                 "actions": {
                     "controllerActionCombinations": "Organisme => list, show, contactList, serviceList, serviceShow",
                     "noncacheableActions": "Organisme => list",
-                    "switchableActions": "list_and_show_organisme\nOrganisme -> list;Organisme -> show; Organisme -> contactList; Organisme -> serviceList; Organisme -> serviceShow;"
+                    "switchableActions": "list_and_show_organisme\nOrganisme -> list; Organisme -> show; Organisme -> contactList; Organisme -> serviceList; Organisme -> serviceShow;"
                 },
                 "key": "pi2",
                 "name": "annuaire_tars_list_and_show_organisme"
@@ -583,7 +583,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-06-08 05:02",
+        "last_modified": "2017-06-08 05:29",
         "extension_builder_version": "7.6.0",
         "be_user": " (1)"
     }
