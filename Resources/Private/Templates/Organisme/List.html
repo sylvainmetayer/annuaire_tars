@@ -1,0 +1,57 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Organisme</h1>
+
+<f:flashMessages />
+
+<table  class="tx_annuairetars" >
+	<tr>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.raisonsociale" /></th>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.adresse" /></th>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.codepostal" /></th>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.ville" /></th>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.telephone" /></th>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.fax" /></th>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.email" /></th>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.description" /></th>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.siret" /></th>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.logo" /></th>
+		<th><f:translate key="tx_annuairetars_domain_model_organisme.horaires" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{organismes}" as="organisme">
+		<tr>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.raisonsociale}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.adresse}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.codepostal}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.ville}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.telephone}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.fax}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.email}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.description}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.siret}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.logo.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{organisme : organisme}"> {organisme.horaires}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{organisme : organisme}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{organisme : organisme}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New Organisme</f:link.action>
+</f:section>

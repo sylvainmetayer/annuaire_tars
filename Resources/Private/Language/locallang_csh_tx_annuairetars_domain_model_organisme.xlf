@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-06-08T14:40:16Z" product-name="annuaire_tars">
+		<header/>
+		<body>
+			<trans-unit id="raisonsociale.description">
+				<source>Raison Sociale</source>
+			</trans-unit>
+			<trans-unit id="adresse.description">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="codepostal.description">
+				<source>Code Postal</source>
+			</trans-unit>
+			<trans-unit id="ville.description">
+				<source>Ville</source>
+			</trans-unit>
+			<trans-unit id="telephone.description">
+				<source>Téléphone</source>
+			</trans-unit>
+			<trans-unit id="fax.description">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="siret.description">
+				<source>SIRET</source>
+			</trans-unit>
+			<trans-unit id="logo.description">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="horaires.description">
+				<source>Horaires</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
