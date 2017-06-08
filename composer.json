@@ -1,0 +1,18 @@
+{
+  "name": "tars/annuaire_tars",
+  "type": "typo3-cms-extension",
+  "version": "0.1.4",
+  "description": "Typo3 Extension",
+  "require": {
+    "typo3/cms-core": "^7.6"
+  },
+  "replace": {
+      "annuaire_tars": "self.version",
+      "tars/annuaire_tars": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "tars\\annuaire_tars\\": "Classes/"
+    }
+  }
+}
