@@ -7,3 +7,6 @@ Notation sur le serveur https:/typo3.dawin.pitchart.me
 Attention aux liens qui ne fonctionnent pas pour le rendu.
 
 Pas de barème prédéfinis, il faut faire le maximum pour avoir le maximum de points.
+
+TODO :
+- Faire une page d'accueil de notre extension qui contiendra les liens vers le reste.
