@@ -66,4 +66,5 @@ class ContactRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
       return $query->execute();
     }
 
+
 }
