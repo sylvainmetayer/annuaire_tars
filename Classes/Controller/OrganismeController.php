@@ -42,18 +42,25 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * @inject
      */
     protected $organismeRepository = NULL;
-    
+
     /**
      * action list
      *
      * @return void
      */
-    public function listAction()
+    public function listAction(\TARS\AnnuaireTars\Query\OrganismeSearch $query = null)
     {
-        $organismes = $this->organismeRepository->findAll();
+      if(!empty($query) && !empty($query->getKeywords())) {
+          $keywords = explode(' ', $query->getKeywords());
+          $organismes = $this->organismeRepository->search($keywords);
+      } else {
+          $organismes = $this->organismeRepository->findAll();
+      }
+
         $this->view->assign('organismes', $organismes);
+        $this->view->assign('query', $query);
     }
-    
+
     /**
      * action show
      *
@@ -64,7 +71,7 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     {
         $this->view->assign('organisme', $organisme);
     }
-    
+
     /**
      * action contactList
      *
@@ -72,9 +79,9 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function contactListAction()
     {
-        
+
     }
-    
+
     /**
      * action serviceList
      *
@@ -82,9 +89,9 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function serviceListAction()
     {
-        
+
     }
-    
+
     /**
      * action serviceShow
      *
@@ -92,7 +99,17 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function serviceShowAction()
     {
-        
+
+    }
+
+    /**
+     * action search
+     *
+     * @return void
+     */
+    public function searchAction($keywords = null)
+    {
+
     }
 
 }

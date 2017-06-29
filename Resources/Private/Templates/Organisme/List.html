@@ -15,9 +15,12 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="main">
 	<h1>Liste des organismes</h1>
 
-	<div style="display: table;">
+<f:flashMessages />
 
-	<f:flashMessages />
+<f:form action="list" name="query" object="{query}">
+	<f:form.textfield property="keywords" />
+  <f:form.submit value="Search" />
+</f:form>
 	<f:for each="{organismes}" as="organisme">
 		<div style="display: table-cell;vertical-align:top;">
 			<div style="margin:20px; border: thick grey solid; width:250px; height:350px;">
@@ -44,4 +47,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	<p>
 		<f:link.action action="new">Ajouter un organisme</f:link.action>
 	</p>
+
+<f:link.action action="new">New Organisme</f:link.action>
 </f:section>

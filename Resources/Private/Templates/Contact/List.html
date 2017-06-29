@@ -17,6 +17,11 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:flashMessages />
 
+<f:form action="list" name="query" object="{query}">
+	<f:form.textfield property="keywords" />
+  <f:form.submit value="Search" />
+</f:form>
+
 <ul>
 	<f:for each="{contacts}" as="contact">
 		<li>
