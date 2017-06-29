@@ -1,91 +1,61 @@
 
-<table class="tx-annuaire-tars" >
+<table class="col-sm-12" style="margin-bottom:30px;">
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.raisonsociale" />
-		</td>
-		<td>
-		{organisme.raisonsociale}
+			<f:image src="{organisme.logo.originalResource.publicUrl}" width="200"/>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.adresse" />
-		</td>
-		<td>
-		{organisme.adresse}
+			<h1 style="font-weight:bold;">{organisme.raisonsociale}</h1>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.codepostal" />
-		</td>
-		<td>
-		{organisme.codepostal}
+			{organisme.description}
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.ville" />
-		</td>
+			<br/>
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">SIRET:</p>
+			&nbsp;
+			{organisme.siret}
+		</td>	
+	<tr>
 		<td>
-		{organisme.ville}
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">Adresse:</p>
+			<br/>
+			{organisme.adresse}
+			<p>{organisme.codepostal} &nbsp; {organisme.ville}</p>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.telephone" />
-		</td>
-		<td>
-		{organisme.telephone}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.fax" />
-		</td>
-		<td>
-		{organisme.fax}
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">Tel:</p>
+			 &nbsp;
+			{organisme.telephone}
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.email" />
-		</td>
-		<td>
-		{organisme.email}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.description" />
-		</td>
-		<td>
-		{organisme.description}
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">Fax:</p>
+			&nbsp;
+			{organisme.fax}
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.siret" />
-		</td>
-		<td>
-		{organisme.siret}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.logo" />
-		</td>
-		<td>
-				<f:image src="{organisme.logo.originalResource.publicUrl}" width="200"/>
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">Mail:</p>
+			 &nbsp;
+			{organisme.email}
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_organisme.horaires" />
-		</td>
-		<td>
-		{organisme.horaires}
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">Horaires:</p>
+			 &nbsp;
+			{organisme.horaires}
 		</td>
 	</tr>
 </table>
