@@ -42,4 +42,19 @@ class OrganismeRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
     );
 
+    public function search(array $keywords){
+
+      $query = $this->createQuery();
+      $searchterms = array();
+      foreach ($keywords as $keyword) {
+        array_push($searchterms, $query->like('raisonsociale', "%$keyword%"));
+        array_push($searchterms, $query->like('adresse', "%$keyword%"));
+      }
+
+      $query->matching($query->logicalOr($searchterms));
+
+      return $query->execute();
+
+    }
+
 }
