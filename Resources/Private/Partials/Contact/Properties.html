@@ -2,92 +2,55 @@
 <table class="tx-annuaire-tars" >
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.nom" />
-		</td>
-		<td>
-		{contact.nom}
+			<f:image src="{contact.photo.originalResource.publicUrl}" width="200"/>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.prenom" />
-		</td>
-		<td>
-		{contact.prenom}
+			<h1 style="font-weight:bold;">{contact.nom} {contact.prenom}</h1>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.telephone" />
-		</td>
-		<td>
-		{contact.telephone}
+			{contact.presentation}
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.email" />
-		</td>
-		<td>
-		{contact.email}
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">Tel:</p>
+			 &nbsp;
+			{contact.telephone}
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.organisme"/>
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">Mail:</p>
+			&nbsp;
+			{contact.fax}
 		</td>
+	</tr>
+	<tr>
 		<td>
-			<f:link.action controller="Organisme" pageUid="{settings.pageOrganisme}" action="show" arguments="{organisme : contact.organisme}">
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">Organisme:</p>
+			&nbsp;
+			<f:link.action controller="Organisme" pageUid="{settings.pageOrganisme}" action="show" arguments="{organisme : contact.organisme}" style="color:black;">
 				{contact.organisme.raisonsociale}
 			</f:link.action>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.service"/>
-		</td>
-		<td>
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">Service:</p>
+			&nbsp;
 			{contact.service.libelle}
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.adresse" />
-		</td>
-		<td>
-		{contact.adresse}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.codepostal" />
-		</td>
-		<td>
-		{contact.codepostal}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.ville" />
-		</td>
-		<td>
-		{contact.ville}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.photo" />
-		</td>
-		<td>
-				<f:image src="{contact.photo.originalResource.publicUrl}" width="200"/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairetars_domain_model_contact.presentation" />
-		</td>
-		<td>
-		{contact.presentation}
+			<p style="font-size:1.1em; color:#ff8700;display:inline;text-decoration:underline;">Adresse:</p>
+			<br/>
+			{organisme.adresse}
+			<p>{organisme.codepostal} &nbsp; {organisme.ville}</p>
 		</td>
 	</tr>
 </table>

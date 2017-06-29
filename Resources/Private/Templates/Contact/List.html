@@ -13,27 +13,31 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Listing for Contact</h1>
-
-<f:flashMessages />
-
-<f:form action="list" name="query" object="{query}">
-	<f:form.textfield property="keywords" />
-  <f:form.submit value="Search" />
-</f:form>
-
-<ul>
-	<f:for each="{contacts}" as="contact">
-		<li>
-			<figure>
-        <f:link.action action="show" arguments="{contact : contact}">
-  				<f:image src="{contact.photo.originalResource.publicUrl}" width="200"/>
-  				<figcaption>
-  						{contact.nom} {contact.prenom}
-  				</figcaption>
-        </f:link.action>
-			</figure>
-		</li>
-	</f:for>
-</ul>
+  <h1>Liste des contacts</h1>
+  
+  <f:flashMessages />
+  
+  <f:form action="list" name="query" object="{query}">
+  	<f:form.textfield property="keywords" />
+    <f:form.submit value="Search" />
+  </f:form>
+  
+  <f:for each="{contacts}" as="contact">
+    <div class="col-sm-6" style="display: table-cell;vertical-align:top;">
+      <div class="col-sm-6" style="margin:20px; border: thick grey solid; width:250px; height:350px;">
+        <center>
+          <div>
+            <f:link.action action="show" arguments="{contact : contact}">
+              <f:image src="{contact.photo.originalResource.publicUrl}" width="200"/>
+            </f:link.action>
+          </div> 
+          <div>
+            <h1 style="font-weight:bold;">
+              <f:link.action action="show" arguments="{contact : contact}"> {contact.nom} {contact.prenom}</f:link.action>
+            </h1>
+          </div>
+        </center>
+      </div>
+    </div>
+  </f:for>
 </f:section>

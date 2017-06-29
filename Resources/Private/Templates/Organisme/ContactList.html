@@ -13,22 +13,29 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Listing of employees from {organisme.raisonsociale}</h1>
+<h1>Listing des employés de l'organisme <b>{organisme.raisonsociale}</b></h1>
 
 
 <ul>
 	<f:for each="{contacts}" as="contact">
-		<li>
-			<figure>
-				<!-- ici mettre image si on veut en mettre une -->
-				<f:image src="{contact.photo.originalResource.publicUrl}" width="200"/>
-				<figcaption>
-					<f:link.action action="show" arguments="{contact : contact}">
-						{contact.nom} {contact.prenom}
-					</f:link.action>
-				</figcaption>
-			</figure>
-		</li>
+		<div class="col-sm-6" style="display: table-cell;vertical-align:top;">
+			<div class="col-sm-6" style="margin:20px; border: thick grey solid; width:250px; height:350px;">
+				<center>
+					<div>
+						<f:link.action action="show" arguments="{contact : contact}">
+							<f:image src="{contact.photo.originalResource.publicUrl}" width="200"/>
+						</f:link.action>
+					</div> 
+					<div>
+						<h1 style="font-weight:bold;">
+								<f:link.action action="show" arguments="{contact : contact}">
+									{contact.nom} {contact.prenom}
+								</f:link.action>
+						</h1>
+					</div>
+				</center>
+			</div>
+		</div>
 	</f:for>
 </ul>
 
