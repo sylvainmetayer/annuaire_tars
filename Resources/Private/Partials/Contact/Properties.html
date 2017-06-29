@@ -34,6 +34,24 @@
 	</tr>
 	<tr>
 		<td>
+			<f:translate key="tx_annuairetars_domain_model_contact.organisme"/>
+		</td>
+		<td>
+			<f:link.action controller="Organisme" pageUid="{settings.pageOrganisme}" action="show" arguments="{organisme : contact.organisme}">
+				{contact.organisme.raisonsociale}
+			</f:link.action>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_annuairetars_domain_model_contact.service"/>
+		</td>
+		<td>
+			{contact.service.libelle}
+		</td>
+	</tr>
+	<tr>
+		<td>
 			<f:translate key="tx_annuairetars_domain_model_contact.adresse" />
 		</td>
 		<td>

@@ -21,6 +21,27 @@
 							</config>
 						</TCEforms>
 					</switchableControllerActions>
+					<settings.pageOrganisme>
+						<TCEforms>
+							<label>Numéro page organisme</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>1</minitems>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+										<default>
+											<searchWholePhrase>1</searchWholePhrase>
+										</default>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.pageOrganisme>
 				</el>
 			</ROOT>
 		</sDEF>
