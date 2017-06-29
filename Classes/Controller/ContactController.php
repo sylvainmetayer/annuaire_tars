@@ -62,6 +62,7 @@ class ContactController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         }
         
         $this->view->assign('contacts', $contacts);
+        $this->view->assign('query', $query);
     }
     
     /**
@@ -83,22 +84,6 @@ class ContactController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     public function searchAction($keywords = null)
     {
 
-        $contacts = array();
-
-        var_dump($keywords);
-
-        if($this->request->hasArgument('query')) { 
-            $keywords = explode(' ', $this->request->getArgument('query'));
-
-            $contacts = $this->contactRepository->findAll($keywords);
-
-        }
-
-        var_dump(keywords);
-        die();
-
-        
-        $this->view->assign('contacts', $contacts);
     }
 
 }

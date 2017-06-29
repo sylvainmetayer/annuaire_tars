@@ -44,9 +44,6 @@ class ContactRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 
 
     public function search(array $keywords){
-
-    	var_dump($keywords);
-
 	    $query = $this->createQuery();
 	    $searchterms = array();
 	    foreach ($keywords as $keyword) {
