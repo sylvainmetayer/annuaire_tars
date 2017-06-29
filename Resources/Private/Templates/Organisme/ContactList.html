@@ -15,11 +15,14 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="main">
 <h1>Listing des employés de l'organisme <b>{organisme.raisonsociale}</b></h1>
 
-
-<ul>
-	<f:for each="{contacts}" as="contact">
-		<div class="col-sm-6" style="display: table-cell;vertical-align:top;">
-			<div class="col-sm-6" style="margin:20px; border: thick grey solid; width:250px; height:350px;">
+<f:groupedFor each="{contacts}" as="contactsSortedByFonction" groupBy="fonction" groupKey="fonction">
+  <h2>{fonction.libelle}</h2>
+  <ul>
+  <f:for each="{contactsSortedByFonction}" as="contact">
+    <table>
+    	<tr>
+    		<td>
+    			<div class="col-sm-6" style=" border: thick grey solid; width:250px; height:350px;">
 				<center>
 					<div>
 						<f:link.action action="show" arguments="{contact : contact}">
@@ -34,9 +37,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
 						</h1>
 					</div>
 				</center>
-			</div>
-		</div>
-	</f:for>
-</ul>
+			</td>
+		</tr>
+	</table>
+  </f:for>
+</f:groupedFor>
 
 </f:section>
