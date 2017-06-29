@@ -15,21 +15,22 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="main">
 	<h1>Liste des organismes</h1>
 
-<f:flashMessages />
+	<f:flashMessages />
 
-<f:form action="list" name="query" object="{query}">
-	<f:form.textfield property="keywords" />
-  <f:form.submit value="Search" />
-</f:form>
+	<f:form action="list" name="query" object="{query}">
+		<f:form.textfield property="keywords" />
+	  <f:form.submit value="Search" />
+	</f:form>
+
 	<f:for each="{organismes}" as="organisme">
-		<div style="display: table-cell;vertical-align:top;">
-			<div style="margin:20px; border: thick grey solid; width:250px; height:350px;">
+		<div class="col-sm-6" style="display: table-cell;vertical-align:top;">
+			<div class="col-sm-6" style="margin:20px; border: thick grey solid; width:250px; height:350px;">
 				<center>
 					<div>
 						<f:link.action action="show" arguments="{organisme : organisme}">
 							<f:image src="{organisme.logo.originalResource.publicUrl}" width="200"/>
 						</f:link.action>
-					</div>
+					</div> 
 					<div>
 						<h1 style="font-weight:bold;">
 							<f:link.action action="show" arguments="{organisme : organisme}"> {organisme.raisonsociale}</f:link.action>
@@ -42,11 +43,4 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			</div>
 		</div>
 	</f:for>
-</div>
-	
-	<p>
-		<f:link.action action="new">Ajouter un organisme</f:link.action>
-	</p>
-
-<f:link.action action="new">New Organisme</f:link.action>
 </f:section>
