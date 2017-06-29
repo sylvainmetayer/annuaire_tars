@@ -25,7 +25,7 @@ TODO :
 
 ## Installation (dev-only)
 
-- git clone git@github.com:pitchart/dawin-typo3-cms-distribution.git ./cms
+- git clone https://github.com/pitchart/dawin-typo3-cms-distribution.git ./cms
 - cd cms
 - composer install
 - php vendor/bin/typo3cms install:setup
