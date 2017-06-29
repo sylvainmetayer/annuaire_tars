@@ -1,6 +1,8 @@
 <?php
 namespace TARS\AnnuaireTars\Controller;
 
+use \TYPO3\CMS\Core\Utility\GeneralUtility;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -46,11 +48,19 @@ class ContactController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action list
      *
+     * @param \TARS\AnnuaireTars\Query\ContactSearch $query
+     * 
      * @return void
      */
-    public function listAction()
+     public function listAction(\TARS\AnnuaireTars\Query\ContactSearch $query = null)
     {
-        $contacts = $this->contactRepository->findAll();
+        if(!empty($query) && !empty($query->getKeywords())) {
+            $keywords = explode(' ', $query->getKeywords());
+            $contacts = $this->contactRepository->search($keywords);
+        } else {
+            $contacts = $this->contactRepository->findAll();
+        }
+        
         $this->view->assign('contacts', $contacts);
     }
     
@@ -70,9 +80,25 @@ class ContactController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      *
      * @return void
      */
-    public function searchAction()
+    public function searchAction($keywords = null)
     {
+
+        $contacts = array();
+
+        var_dump($keywords);
+
+        if($this->request->hasArgument('query')) { 
+            $keywords = explode(' ', $this->request->getArgument('query'));
+
+            $contacts = $this->contactRepository->findAll($keywords);
+
+        }
+
+        var_dump(keywords);
+        die();
+
         
+        $this->view->assign('contacts', $contacts);
     }
 
 }
