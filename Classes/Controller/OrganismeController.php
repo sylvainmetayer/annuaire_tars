@@ -44,6 +44,14 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     protected $organismeRepository = NULL;
 
     /**
+     * contactRepository
+     *
+     * @var \TARS\AnnuaireTars\Domain\Repository\ContactRepository
+     * @inject
+     */
+    protected $contactRepository = NULL;
+
+    /**
      * action list
      *
      * @return void
@@ -61,6 +69,19 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $this->view->assign('query', $query);
     }
 
+    /*
+    * action list all the employee
+    *
+    * @return void
+    */
+    public function listAllEmployees(\TARS\AnnuaireTars\Domain\Model\Contact $organisme, \TARS\AnnuaireTars\Domain\Model\Organisme $organiseme ) {
+
+      $this->view->assign('organimse', $organisme);
+
+
+
+    }
+
     /**
      * action show
      *
@@ -75,10 +96,18 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     /**
      * action contactList
      *
+     * @param \TARS\AnnuaireTars\Domain\Model\Organisme $organisme
      * @return void
      */
-    public function contactListAction()
+    public function contactListAction(\TARS\AnnuaireTars\Domain\Model\Organisme $organisme)
     {
+
+      //var_dump($organisme);
+      //die();
+
+      $contacts = $this->contactRepository->findByOrganisme($organisme);
+      $this->view->assignMultiple(['organisme' =>$organisme, 'contacts' => $contacts]);
+
 
     }
 
@@ -111,5 +140,7 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     {
 
     }
+
+
 
 }

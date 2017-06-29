@@ -42,7 +42,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @validate NotEmpty
      */
     protected $raisonsociale = '';
-    
+
     /**
      * Adresse
      *
@@ -50,7 +50,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @validate NotEmpty
      */
     protected $adresse = '';
-    
+
     /**
      * Code Postal
      *
@@ -58,7 +58,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @validate NotEmpty
      */
     protected $codepostal = '';
-    
+
     /**
      * Ville
      *
@@ -66,35 +66,35 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @validate NotEmpty
      */
     protected $ville = '';
-    
+
     /**
      * Téléphone
      *
      * @var string
      */
     protected $telephone = '';
-    
+
     /**
      * Fax
      *
      * @var string
      */
     protected $fax = '';
-    
+
     /**
      * Email
      *
      * @var string
      */
     protected $email = '';
-    
+
     /**
      * Description
      *
      * @var string
      */
     protected $description = '';
-    
+
     /**
      * SIRET
      *
@@ -102,21 +102,21 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @validate NotEmpty
      */
     protected $siret = '';
-    
+
     /**
      * Logo
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      */
     protected $logo = null;
-    
+
     /**
      * Horaires
      *
      * @var string
      */
     protected $horaires = '';
-    
+
     /**
      * Returns the raisonsociale
      *
@@ -126,7 +126,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->raisonsociale;
     }
-    
+
     /**
      * Sets the raisonsociale
      *
@@ -137,7 +137,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->raisonsociale = $raisonsociale;
     }
-    
+
     /**
      * Returns the adresse
      *
@@ -147,7 +147,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->adresse;
     }
-    
+
     /**
      * Sets the adresse
      *
@@ -158,7 +158,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->adresse = $adresse;
     }
-    
+
     /**
      * Returns the codepostal
      *
@@ -168,7 +168,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->codepostal;
     }
-    
+
     /**
      * Sets the codepostal
      *
@@ -179,7 +179,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->codepostal = $codepostal;
     }
-    
+
     /**
      * Returns the ville
      *
@@ -189,7 +189,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->ville;
     }
-    
+
     /**
      * Sets the ville
      *
@@ -200,7 +200,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->ville = $ville;
     }
-    
+
     /**
      * Returns the telephone
      *
@@ -210,7 +210,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->telephone;
     }
-    
+
     /**
      * Sets the telephone
      *
@@ -221,7 +221,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->telephone = $telephone;
     }
-    
+
     /**
      * Returns the fax
      *
@@ -231,7 +231,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->fax;
     }
-    
+
     /**
      * Sets the fax
      *
@@ -242,7 +242,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->fax = $fax;
     }
-    
+
     /**
      * Returns the email
      *
@@ -252,7 +252,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->email;
     }
-    
+
     /**
      * Sets the email
      *
@@ -263,7 +263,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->email = $email;
     }
-    
+
     /**
      * Returns the description
      *
@@ -273,7 +273,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->description;
     }
-    
+
     /**
      * Sets the description
      *
@@ -284,7 +284,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->description = $description;
     }
-    
+
     /**
      * Returns the siret
      *
@@ -294,7 +294,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->siret;
     }
-    
+
     /**
      * Sets the siret
      *
@@ -305,7 +305,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->siret = $siret;
     }
-    
+
     /**
      * Returns the logo
      *
@@ -315,7 +315,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->logo;
     }
-    
+
     /**
      * Sets the logo
      *
@@ -326,7 +326,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->logo = $logo;
     }
-    
+
     /**
      * Returns the horaires
      *
@@ -336,7 +336,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->horaires;
     }
-    
+
     /**
      * Sets the horaires
      *
@@ -347,5 +347,7 @@ class Organisme extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->horaires = $horaires;
     }
+
+
 
 }

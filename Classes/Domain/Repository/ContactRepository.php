@@ -28,7 +28,7 @@ namespace TARS\AnnuaireTars\Domain\Repository;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-
+use TARS\AnnuaireTars\Domain\Model\Organisme;
 /**
  * The repository for Contacts
  */
@@ -55,6 +55,15 @@ class ContactRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 
 	    return $query->execute();
 
+    }
+
+    public function findByOrganisme(Organisme $organisme) {
+
+
+      $query = $this->createQuery();
+
+      $query->matching($query->equals('organisme', $organisme));
+      return $query->execute();
     }
 
 }
