@@ -50,3 +50,7 @@ TODO :
 - php -S localhost:8080 -t web/
 
 - Ouvrir un navigateur http://localhost:8080/ & http://localhost:8080/typo3 pour la partie admin
+
+Mot de passe :
+- dawin / dawin2017
+- admin / dawin2017
