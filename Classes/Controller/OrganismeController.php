@@ -29,6 +29,7 @@ namespace TARS\AnnuaireTars\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+
 /**
  * OrganismeController
  */
@@ -106,6 +107,7 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function serviceListAction(\TARS\AnnuaireTars\Domain\Model\Organisme $organisme)
     {
+
             $contacts = $this->contactRepository->findByOrganisme($organisme);
             $services = [];
             foreach ($contacts as $contact) {
@@ -113,8 +115,8 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 $services[$contact->getService()->getUid()] = $contact->getService();
               }
             }
-            $this->view->assignMultiple(['organisme' =>$organisme, 'services' => $services]);
 
+            $this->view->assignMultiple(['organisme' =>$organisme, 'services' => $services]);
     }
 
     /**
@@ -124,7 +126,6 @@ class OrganismeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function serviceShowAction(\TARS\AnnuaireTars\Domain\Model\Organisme $organisme)
     {
-
     }
 
     /**
