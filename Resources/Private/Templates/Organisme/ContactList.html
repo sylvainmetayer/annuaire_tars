@@ -15,21 +15,22 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="main">
 <h1>Listing of employees from {organisme.raisonsociale}</h1>
 
-
-<ul>
-	<f:for each="{contacts}" as="contact">
-		<li>
-			<figure>
-				<!-- ici mettre image si on veut en mettre une -->
-				<f:image src="{contact.photo.originalResource.publicUrl}" width="200"/>
-				<figcaption>
-					<f:link.action action="show" arguments="{contact : contact}">
-						{contact.nom} {contact.prenom}
-					</f:link.action>
-				</figcaption>
-			</figure>
-		</li>
-	</f:for>
+<f:groupedFor each="{contacts}" as="contactsSortedByFonction" groupBy="fonction" groupKey="fonction">
+  <h2>{fonction.libelle}</h2>
+  <ul>
+  <f:for each="{contactsSortedByFonction}" as="contact">
+    <li>
+      <figure>
+        <f:link.action action="show" arguments="{contact : contact}">
+          <f:image src="{contact.photo.originalResource.publicUrl}" width="200"/>
+          <figcaption>
+              {contact.nom} {contact.prenom} - {contact.fonction.libelle}
+          </figcaption>
+        </f:link.action>
+      </figure>
+    </li>
+  </f:for>
 </ul>
+</f:groupedFor>
 
 </f:section>
